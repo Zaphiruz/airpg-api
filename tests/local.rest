@@ -1,0 +1,33 @@
+@protocol = http
+@host = 127.0.0.1:8080
+@contentType = application/json
+
+GET {{protocol}}://{{host}}/api/entities HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/items HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/places HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/recipes HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/spells HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/items/tags?tags=PLANT,RARE&tagFilterMode=all HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/items/tags?tags=PLANT,RARE&tagFilterMode=or HTTP/1.1
+
+###
+
+GET {{protocol}}://{{host}}/api/items?tags=PLANT,RARE HTTP/1.1
