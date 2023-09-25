@@ -4,7 +4,8 @@ import path from 'path';
 import _ from 'lodash';
 import 'dotenv/config';
 
-import apiRoute from './routes/api.mjs';
+import apiRoute from './routes/api/index.mjs';
+import metaRoute from './routes/meta/index.mjs';
 
 const port = process.env.PORT;
 const address = process.env.ADDRESS;
@@ -29,6 +30,7 @@ const main = async () => {
 	app.use('/public', express.static(path.resolve('./public')));
 
 	app.use('/api', apiRoute);
+	app.use('/meta', metaRoute);
 
 	app.listen(port, address, () => {
 		console.log(`api listening on ${address}:${port}`);

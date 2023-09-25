@@ -1,0 +1,6 @@
+@protocol = http
+@host = 127.0.0.1:8080
+@contentType = application/json
+
+
+GET {{protocol}}://{{host}}/meta/collectionNames HTTP/1.1
