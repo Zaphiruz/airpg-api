@@ -25,7 +25,7 @@ export const listRecords = (model) => async (req, res) => {
 	if ("tags" in queryParams) {
 		queryParams = {
 			...queryParams,
-			...buildTagParams(query)
+			...buildTagParams(queryParams)
 		}
 	}
 
